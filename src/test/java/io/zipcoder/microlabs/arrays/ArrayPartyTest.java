@@ -12,6 +12,7 @@ public class ArrayPartyTest {
     @Before
     public void setUp(){ arrayParty = new ArrayParty(); }
 
+
     @Test
     public void printArrayTest(){
         //: Given
@@ -64,6 +65,7 @@ public class ArrayPartyTest {
 
     }
 
+
     @Test
     public void reverseTest(){
         //: Given
@@ -78,6 +80,7 @@ public class ArrayPartyTest {
         assertEquals( expected, actual);
 
     }
+
 
     @Test
     public void trueIsPalindromeTest(){  // test a true Palin to see if it returns true
@@ -94,6 +97,7 @@ public class ArrayPartyTest {
 
     }
 
+
     @Test
     public void falseIsPalindromeTest(){  // test a true Palin to see if it returns false
         //: Given
@@ -109,12 +113,13 @@ public class ArrayPartyTest {
 
     }
 
+
     @Test
     public void compressTest(){  // test a true Palin to see if it returns false
         //: Given
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
 
-        String expected = "*** Output ***\n: 1\n: 3\n: 2\n: 1\n: 4";
+        String expected = "compressTest()\n*** Output ***\n: 1\n: 3\n: 2\n: 1\n: 4";
 
         //: When
         String actual = arrayParty.compress(nums);
@@ -125,12 +130,19 @@ public class ArrayPartyTest {
     }
 
 
+    @Test
+    public void packTest(){  // test a true Palin to see if it returns false
+        //: Given
+        char [] letters = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
 
+        String expected = "pack()\n*** Output ***\n: aaaa, b, cc, aa, d, eeee";
 
+        //: When
+        String actual = arrayParty.pack(letters);
 
-    //TODO Define the method compressTest
+        //: Then
+        assertEquals( expected, actual);
 
-    //TODO Define the method packTest
-
+    }
 
 }

@@ -43,7 +43,6 @@ public class ArrayParty {
 
         String result = "*** Output ***";
 
-
         for (int i = inputArray.length - 1 ; i >= 0; i --){
 
             result = result + "\n" + inputArray[i];
@@ -74,13 +73,12 @@ public class ArrayParty {
         }
 
         return intro + result;
-
     }
 
 
     public String compress(int[] inputArray){
 
-        String result = "*** Output ***";
+        String result = "compressTest()\n*** Output ***";
 
         int temp = 0;
 
@@ -100,28 +98,30 @@ public class ArrayParty {
         }
 
         return result;
-
     }
 
 
+    public String pack(char[] inputArray){
 
+        char firstChar = inputArray[0];
 
+        String result = "pack()\n*** Output ***\n: " + firstChar;
 
+        for (int i = 0; i < inputArray.length - 1; i++){
 
+            if (inputArray[i] == inputArray[i+1]){
 
+                result = result + inputArray[i+1];
 
+            } else {
 
+                result = result + ", " + inputArray[i+1];
+            }
 
-    //TODO Define the method pack
+        }
 
-    public static void main(String[] args) {
-
-        ArrayParty test = new ArrayParty();
-        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        System.out.println(test.reverse(breakfast));
-
-
-
+        return result;
     }
+
 
 }
